@@ -1,9 +1,14 @@
+:root {
+    --input-border-hover-and-focus: #7E7E7E;
+}
+
 .input {
     width: 100%;
     vertical-align: top;
     height: 50px;
     padding: 11px 22px;
     background-color: #FFFFFF;
+    background-clip: padding-box;
     border: 2px solid #B3B3B3;
     border-radius: 4px;
     font-family: inherit;
@@ -11,10 +16,20 @@
     line-height: 24px;
     color: #000000;
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 .input::placeholder {
     opacity: 1;
     font-style: normal;
     color: #999999;
+}
+
+.input:hover {
+    border-color: var(--input-border-hover-and-focus);
+}
+
+.input:focus-visible {
+    border-color: var(--input-border-hover-and-focus);
+    box-shadow: 0 0 0 1px var(--input-border-hover-and-focus);
 }
