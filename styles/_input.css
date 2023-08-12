@@ -1,3 +1,20 @@
 .input {
+    width: 100%;
+    vertical-align: top;
+    height: 50px;
+    padding: 11px 22px;
+    background-color: #FFFFFF;
+    border: 2px solid #B3B3B3;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    -webkit-tap-highlight-color: transparent;
+}
 
+.input::placeholder {
+    opacity: 1;
+    font-style: normal;
+    color: #999999;
 }
