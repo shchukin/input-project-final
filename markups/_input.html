@@ -8,34 +8,36 @@
     </head>
     <body>
 
-    <h1>Input</h1>
+        <h1>Input</h1>
 
-        <input class="input" type="text" placeholder="First name">
-
-        <br>
-        <br>
-
-        <input class="input" type="text" placeholder="First name" value="Konstantin Konstantinopolsky">
+        <input class="input" type="text" placeholder="first name">
 
         <br>
         <br>
-        <h2>Select</h2>
 
-        <label>
-            <select class="input">
-                <option>Bangkok</option>
-                <option>Tokyo</option>
-                <option>...</option>
-                <option>Moscow</option>
-                <option>Hi Chi minh city</option>
-            </select>
-        </label>
+        <input class="input" type="text" placeholder="first name" value="konstantin konstantinopolsky">
 
         <br>
         <br>
-        <h2>Textarea</h2>
+        <br>
+        <h2>Вариант с Label и Helper</h2>
 
-        <textarea class="input"></textarea>
+        <label class="label" for="hgoxcow">First name</label>
+        <input class="input" type="text" placeholder="first name" id="hgoxcow">
+        <div class="helper">Can’t be changed later</div>
+
+        <br>
+        <br>
+        <h2>select</h2>
+
+        <select class="input">
+            <option>bangkok</option>
+            <option>tokyo</option>
+            <option>...</option>
+            <option>moscow</option>
+            <option>hi chi minh city</option>
+        </select>
+
 
 
         <script src="../vendors/jquery/jquery-3.7.0.min.js"></script>
