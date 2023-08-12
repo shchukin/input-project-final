@@ -43,3 +43,18 @@
     border-color: #B3B3B3;
     color: #999999;
 }
+
+.input:disabled::placeholder {
+    color: #999999;
+}
+
+.input--error,
+.input:invalid {
+    border-color: var(--error);
+    color: var(--error);
+}
+
+.input--error::placeholder,
+.input:invalid::placeholder {
+    color: var(--error);
+}
