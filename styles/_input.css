@@ -58,3 +58,9 @@
 .input:invalid::placeholder {
     color: var(--error);
 }
+
+
+.input[type="password"] {
+    font-family: "Tahoma";
+    letter-spacing: 2px;
+}
