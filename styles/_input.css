@@ -76,6 +76,7 @@ textarea.input {
 
 select.input {
     appearance: none;
+    padding-right: 50px;
     background-image: url("../vectors/dropdown.svg");
     background-size: 16px 16px;
     background-repeat: no-repeat;
