@@ -36,3 +36,10 @@
     box-shadow: 0 0 0 1px var(--input-border-hover-and-focus);
     transition: none;
 }
+
+
+.input:disabled {
+    background-color: #F6F6F6;
+    border-color: #B3B3B3;
+    color: #999999;
+}
