@@ -1,4 +1,5 @@
 :root {
+    --input-border: #B3B3B3;
     --input-border-hover-and-focus: #7E7E7E;
 }
 
@@ -9,7 +10,7 @@
     padding: 11px 22px;
     background-color: #FFFFFF;
     background-clip: padding-box;
-    border: 2px solid #B3B3B3;
+    border: 2px solid var(--input-border);
     border-radius: 4px;
     font-family: inherit;
     font-size: 16px;
@@ -70,4 +71,24 @@ textarea.input {
     min-height: 50px; /* 1 row */
     max-height: 266px; /* 10 rows */
     resize: vertical;
+}
+
+
+select.input {
+    appearance: none;
+    background-image: url("../vectors/dropdown.svg");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    cursor: pointer;
+}
+
+select.input:hover {
+    border-color: var(--input-border);
+    box-shadow: none;
+    background-color: #F6F6F6;
+}
+
+select.input--error {
+    background-image: url("../vectors/dropdown-error.svg");
 }
