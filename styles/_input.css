@@ -61,6 +61,13 @@
 
 
 .input[type="password"] {
-    font-family: "Tahoma";
+    font-family: "Tahoma", sans-serif;
     letter-spacing: 2px;
+}
+
+textarea.input {
+    height: auto;
+    min-height: 50px; /* 1 row */
+    max-height: 266px; /* 10 rows */
+    resize: vertical;
 }
