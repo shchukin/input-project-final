@@ -8,7 +8,7 @@
     </head>
     <body>
 
-        <h1>Input</h1>
+        <h1>.input</h1>
 
         <input class="input" type="text" placeholder="First name">
 
@@ -17,39 +17,57 @@
 
         <input class="input" type="text" placeholder="First name" value="Konstantin Konstantinopolsky">
 
-        <br>
-        <br>
-        <br>
-        <h2>Вариант с Label и Helper</h2>
 
-        <label class="label" for="first-name">First name</label>
-        <input class="input" type="text" placeholder="First name" id="first-name">
-        <div class="helper">Can’t be changed later</div>
+        <br>
+        <br>
+        <br>
+        <h2>With Label and Helper</h2>
 
+        <label class="label" for="bp24napi">
+            First name
+        </label>
+
+        <input class="input" type="text" id="bp24napi">
+
+        <div class="helper">
+            Can’t be changed later
+        </div>
 
         <br>
         <br>
         <br>
         <h2>Disabled</h2>
-        <input class="input" type="text" placeholder="First name" disabled>
 
-        <br>
+        <input class="input" type="text" placeholder="First name" disabled>
+        <div class="helper">Please choose contract type before filling the name</div>
+
         <br>
 
         <input class="input" type="text" placeholder="First name" value="Konstantin Konstantinopolsky" disabled>
+        <div class="helper">Name can’t be changed</div>
+
 
         <br>
         <br>
         <br>
         <h2>.input--error</h2>
+
         <input class="input input--error" type="text" placeholder="First name">
         <div class="helper helper--error">This field is required</div>
 
         <br>
-        <br>
 
         <input class="input input--error" type="email" placeholder="Email" value="foobar@example.">
         <div class="helper helper--error">Email is not valid</div>
+
+        <br>
+        <p>Multiple errors:</p>
+
+        <input class="input input--error" type="password" placeholder="Password" value="0xFoo">
+        <div class="helper helper--error">Password is too short</div>
+        <div class="helper helper--error">Password must contain a special character</div>
+        <div class="helper helper--error">Password must be hard to guess: dates, phone numbers and names are not allowed and either it shouldn’t be based on public data</div>
+        <div class="helper helper--error">New password is similar to previous password</div>
 
 
         <br>
@@ -57,97 +75,162 @@
         <br>
         <h2>Password</h2>
 
-        <input class="input" type="password" placeholder="Password" value="Lorem">
+        <input class="input" type="password" value="0xFoo">
 
 
         <br>
         <br>
         <br>
         <h2>Textarea</h2>
+        <p>
+            Don’t forget to use the <b><i>rows</i></b> attribute to specify number of lines.
+        </p>
 
-        <textarea class="input" rows="3"></textarea>
+        <textarea class="input" placeholder="Your message" rows="3"></textarea>
 
         <br>
         <br>
         <h3>.input--expandable</h3>
 
-        <textarea class="input input--expandable" rows="3"></textarea>
-
-
-
-
-
+        <textarea class="input input--expandable" placeholder="Your message" rows="3"></textarea>
 
         <br>
         <br>
-        <h2>select</h2>
+        <br>
+        <h2>Select</h2>
 
         <select class="input">
-            <option>bangkok</option>
-            <option>tokyo</option>
+            <option selected>Bangkok</option>
+            <option>Moscow</option>
             <option>...</option>
-            <option>moscow</option>
-            <option>hi chi minh city</option>
+            <option>Washington</option>
         </select>
 
         <br>
         <br>
 
         <select class="input" disabled>
-            <option>bangkok</option>
-            <option>tokyo</option>
+            <option selected>Bangkok</option>
+            <option>Moscow</option>
             <option>...</option>
-            <option>moscow</option>
-            <option>hi chi minh city</option>
+            <option>Washington</option>
         </select>
 
         <br>
         <br>
 
         <select class="input input--error">
-            <option>bangkok</option>
-            <option>tokyo</option>
+            <option selected>Bangkok</option>
+            <option>Moscow</option>
             <option>...</option>
-            <option>moscow</option>
-            <option>hi chi minh city</option>
+            <option>Washington</option>
         </select>
-
 
 
         <br>
         <br>
         <h3>Placeholder</h3>
 
-        <select class="input input--placeholder-is-chosen">
-            <option value="placeholder" selected disabled>Choose city</option>
-            <option>bangkok</option>
-            <option>tokyo</option>
+        <select class="input">
+            <option value="placeholder" selected>City</option>
+            <option>Bangkok</option>
+            <option>Moscow</option>
             <option>...</option>
-            <option>moscow</option>
-            <option>hi chi minh city</option>
+            <option>Washington</option>
         </select>
 
         <br>
         <br>
 
-        <select class="input input--placeholder-is-chosen" disabled>
-            <option value="placeholder" selected disabled>Choose city</option>
-            <option>tokyo</option>
+        <select class="input" disabled>
+            <option value="placeholder" selected>City</option>
+            <option>Bangkok</option>
+            <option>Moscow</option>
             <option>...</option>
-            <option>moscow</option>
-            <option>hi chi minh city</option>
+            <option>Washington</option>
         </select>
 
         <br>
         <br>
 
-        <select class="input input--placeholder-is-chosen input--error">
-            <option value="placeholder" selected disabled>Choose city</option>
-            <option>tokyo</option>
+        <select class="input input--error">
+            <option value="placeholder" selected>City</option>
+            <option>Bangkok</option>
+            <option>Moscow</option>
             <option>...</option>
-            <option>moscow</option>
-            <option>hi chi minh city</option>
+            <option>Washington</option>
         </select>
+
+
+
+        <br>
+        <br>
+        <br>
+        <h2>Остальные типы</h2>
+        <br>
+
+        <label class="label" for="uzoyce97">type="email"</label>
+        <input class="input" type="email" id="uzoyce97">
+
+        <br>
+        <br>
+
+        <label class="label" for="qv6hko4q">type="tel"</label>
+        <input class="input" type="tel" id="qv6hko4q">
+
+        <br>
+        <br>
+
+        <label class="label" for="dqx2iwgu">type="url"</label>
+        <input class="input" type="url" id="dqx2iwgu">
+
+        <br>
+        <br>
+
+        <label class="label" for="ey58yjk9">type="search"</label>
+        <input class="input" type="search" id="ey58yjk9">
+
+        <br>
+        <br>
+
+        <label class="label" for="h68i9f7g">type="number"</label>
+        <input class="input" type="number" id="h68i9f7g">
+
+        <br>
+        <br>
+
+        <label class="label" for="8fq2k8fo">type="color"</label>
+        <input class="input" type="color" id="8fq2k8fo">
+
+        <br>
+        <br>
+
+        <label class="label" for="vecqj15p">type="date"</label>
+        <input class="input" type="date" id="vecqj15p">
+
+        <br>
+        <br>
+
+        <label class="label" for="8xg4jfb3">type="datetime-local"</label>
+        <input class="input" type="datetime-local" id="8xg4jfb3">
+
+        <br>
+        <br>
+
+        <label class="label" for="brif3gg2">type="week"</label>
+        <input class="input" type="week" id="brif3gg2">
+
+        <br>
+        <br>
+
+        <label class="label" for="iei6tkvf">type="month"</label>
+        <input class="input" type="month" id="iei6tkvf">
+
+        <br>
+        <br>
+
+        <label class="label" for="33s23mr7">type="time"</label>
+        <input class="input" type="time" id="33s23mr7">
 
 
 
