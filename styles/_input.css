@@ -62,10 +62,10 @@
 }
 
 
-/*.input[type="password"] {*/
-/*    font-family: "Tahoma", sans-serif;*/
-/*    letter-spacing: 2px;*/
-/*}*/
+.input[type="password"] {
+    font-family: "Tahoma", sans-serif;
+    letter-spacing: 2px;
+}
 
 textarea.input {
     height: auto;
