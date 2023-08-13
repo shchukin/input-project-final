@@ -1,23 +1,36 @@
 (function ($) {
 
+    /* Error field */
     $('.input').on('focus', function () {
-        $('.input').removeClass('input--error');
+        $(this).removeClass('input--error');
+        $(this).nextUntil(':not(.helper--error)').remove();
     });
+
+    /* Select placeholder */
+    function selectPlaceholder($element) {
+        if ($element.val() === 'placeholder') {
+            $element.addClass('input--placeholder-is-chosen');
+        } else {
+            $element.removeClass('input--placeholder-is-chosen');
+        }
+    }
+
+    $('select.input').each(function () {
+        selectPlaceholder($(this));
+    }).on('change', function () {
+        selectPlaceholder($(this));
+    });
+
+    /* Expanding textarea */
+    function expandTextarea($element) {
+        $element.css('height', 'auto');
+        $element.css('height', ($element[0].scrollHeight + 2 * parseInt($element.css('border-width'), 10)) + 'px');
+    }
 
     $('.input--expandable').each(function () {
-        $(this).css('height', 'auto');
-        $(this).css('height', $(this)[0].scrollHeight + 2 * parseInt($(this).css('border-width'), 10) + 'px');
+        expandTextarea($(this));
     }).on('input', function () {
-        $(this).css('height', 'auto');
-        $(this).css('height', $(this)[0].scrollHeight + 2 * parseInt($(this).css('border-width'), 10) + 'px');
+        expandTextarea($(this));
     });
-
-    $('select').on('change',function () {
-        if( $(this).val() === 'placeholder' ) {
-            $(this).addClass('input--placeholder-is-chosen');
-        } else {
-            $(this).removeClass('input--placeholder-is-chosen');
-        }
-    })
 
 })(jQuery);
