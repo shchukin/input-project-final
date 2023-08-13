@@ -1,6 +1,7 @@
 :root {
     --input-border: #B3B3B3;
     --input-border-hover-and-focus: #7E7E7E;
+    --placeholder: #999999;
 }
 
 .input {
@@ -25,7 +26,7 @@
 .input::placeholder {
     opacity: 1;
     font-style: normal;
-    color: #999999;
+    color: var(--placeholder);
 }
 
 .input:hover {
@@ -61,10 +62,10 @@
 }
 
 
-.input[type="password"] {
-    font-family: "Tahoma", sans-serif;
-    letter-spacing: 2px;
-}
+/*.input[type="password"] {*/
+/*    font-family: "Tahoma", sans-serif;*/
+/*    letter-spacing: 2px;*/
+/*}*/
 
 textarea.input {
     height: auto;
@@ -92,4 +93,8 @@ select.input:hover {
 
 select.input--error {
     background-image: url("../vectors/dropdown-error.svg");
+}
+
+.input--placeholder-is-chosen {
+    color: var(--placeholder);
 }
