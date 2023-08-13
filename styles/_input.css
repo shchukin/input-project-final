@@ -129,6 +129,9 @@ select.input--error:hover {
     .input--placeholder-is-chosen {
         color: var(--placeholder-color);
     }
+        .input--placeholder-is-chosen option {
+            color: #000000; /* FF, ie? тупит и наследует серый цвет */
+        }
 
     .input--placeholder-is-chosen:disabled {
         color: var(--disabled-color);
