@@ -99,7 +99,8 @@ textarea.input {
 
 
 select.input {
-    appearance: none;
+    -webkit-appearance: none;
+            appearance: none;
     padding-right: 50px;
     background-image: url("../vectors/dropdown.svg");
     background-size: 16px 16px;
@@ -109,8 +110,8 @@ select.input {
 }
 
 select.input:hover {
-    box-shadow: none; /* как у оригинального инпута в спокойствии */
-    border-color: var(--input-border); /* как у оригинального инпута в спокойствии */
+    box-shadow: none; /* Как у оригинального инпута в спокойствии */
+    border-color: var(--input-border); /* Как у оригинального инпута в спокойствии */
     background-color: #F6F6F6;
 }
 
@@ -130,7 +131,7 @@ select.input--error:hover {
         color: var(--placeholder-color);
     }
         .input--placeholder-is-chosen option {
-            color: #000000; /* FF, ie? тупит и наследует серый цвет */
+            color: #000000; /* Браузеры на винде пробрасывают серый цвет от селекта в опции. Отменяем. */
         }
 
     .input--placeholder-is-chosen:disabled {
