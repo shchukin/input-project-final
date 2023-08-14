@@ -55,7 +55,7 @@
 }
 
 
-/* Disabled */
+/* Заблокированный кейс */
 .input:disabled {
     opacity: 1; /* Восстанавливаем прозрачность в Firefox для <select> */
     border-color: var(--input-border);
@@ -70,7 +70,7 @@
 }
 
 
-/* Error */
+/* Кейс с ошибкой */
 .input--error {
 
 }
@@ -102,7 +102,7 @@ select.input {
     -webkit-appearance: none;
             appearance: none;
     padding-right: 50px;
-    background-image: url("../vectors/dropdown.svg");
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cGF0aCBmaWxsPSIjQjNCM0IzIiBkPSJNMS4yOTMgNS4yOTNhMSAxIDAgMCAxIDEuNDE0IDBMOCAxMC41ODZsNS4yOTMtNS4yOTNhMSAxIDAgMSAxIDEuNDE0IDEuNDE0TDkuNDE0IDEyYTIgMiAwIDAgMS0yLjgyOCAwTDEuMjkzIDYuNzA3YTEgMSAwIDAgMSAwLTEuNDE0eiIvPgo8L3N2Zz4K);
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: right 16px center;
@@ -115,7 +115,7 @@ select.input:hover {
     background-color: #F6F6F6;
 }
 
-/* Error */
+
 select.input--error {
     background-image: url("../vectors/dropdown-error.svg");
 }
@@ -130,9 +130,6 @@ select.input--error:hover {
     .input--placeholder-is-chosen {
         color: var(--placeholder-color);
     }
-        .input--placeholder-is-chosen option {
-            color: #000000; /* Браузеры на винде пробрасывают серый цвет от селекта в опции. Отменяем. */
-        }
 
     .input--placeholder-is-chosen:disabled {
         color: var(--disabled-color);
@@ -141,4 +138,8 @@ select.input--error:hover {
     .input--placeholder-is-chosen.input--error {
         color: var(--error);
     }
+        .input--placeholder-is-chosen option {
+            color: #000000; /* Браузеры на винде пробрасывают серый цвет от селекта в опции. Отменяем. */
+        }
+
 

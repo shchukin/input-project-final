@@ -1,12 +1,12 @@
 (function ($) {
 
-    /* Error field */
+    /* Снимаем состояние ошибки по фокусу */
     $('.input').on('focus', function () {
         $(this).removeClass('input--error');
         $(this).nextUntil(':not(.helper--error)').remove();
     });
 
-    /* Select placeholder */
+    /* Добавляем placeholder к <select> */
     function selectPlaceholder($element) {
         if ($element.val() === 'placeholder') {
             $element.addClass('input--placeholder-is-chosen');
@@ -21,7 +21,7 @@
         selectPlaceholder($(this));
     });
 
-    /* Expanding textarea */
+    /* Расхлопывание <textarea> */
     function expandTextarea($element) {
         $element.css('height', 'auto');
         $element.css('height', ($element[0].scrollHeight + 2 * parseInt($element.css('border-width'), 10)) + 'px');
